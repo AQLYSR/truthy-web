@@ -3,10 +3,11 @@ import Aurora from '@/components/Aurora'
 import GlassSurface from '@/components/GlassSurface'
 import PhoneMockup from "@/components/PhoneMockup"
 import TruthBubbleCarousel from "@/components/TruthBubbleCarousel"
+import ShinyText from '@/components/ShinyText'
 
 function App() {
   const thoughts = [
-    "Reminder; touch grass🌱",
+    "Reminder: touch grass🌱",
     "Is it weird I feel more creative at 2am?",
     "Can't stop thinking about AI replacing homework",
     "If I write it, will future-me judge me?",
@@ -61,9 +62,26 @@ function App() {
       <li> bla </li>
     </ul>
     <p>
-      Every day at a random time, you'll get a prompt to share what's on your mind. Post your thought to see what your friends are thinking too.
+      Everyday you'll get a prompt to share what's on your mind. Post your RAW thought to see what your friends are thinking too.
     </p>
-    <button className="cta">Join the Wailist</button>
+    <p>
+      Join the waitlist below 👇
+    </p>
+    <div className="waitlist-form">
+      <input
+        type="email"
+        placeholder="Enter your email"
+        className="waitlist-input"
+      />
+      <button className="waitlist-button">
+        <ShinyText
+          text="Join Waitlist"
+          disabled = {false}
+          speed= {3}
+          className="shinytext"
+        />
+      </button>
+    </div>
     </div>
 
     <div className="hero-visual">

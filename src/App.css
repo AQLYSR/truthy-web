@@ -166,3 +166,103 @@ html, body {
   transform: translateY(-8px);
   opacity: 0;
 }
+
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 80vh;
+  padding: 0 5%;
+  gap: 3rem;
+}
+
+.hero-text {
+  flex: 1;
+  max-width: 1000px;
+  color: #fff;
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+  margin-left: 4rem;
+  font-weight: 700;
+}
+.hero-text ul {
+  line-height: 1;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+.hero-text h1 {
+  font-size: 5rem;
+  margin-bottom: 0.3rem;
+}
+.hero-text p {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+
+.hero-visual {
+  right: 0;
+  top: 50%;
+  max-width: 400px;
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 3rem;
+}
+
+.hero-visual .phone {
+  transform: scale(0.9);
+}
+.waitlist-form {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  max-width: 480px;
+}
+.waitlist-input {
+  flex: 1;
+  padding: 0.75rem 1.5rem;
+  border-radius: 13px;
+  border: 1px solid rgba(255, 255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px) saturate(1.6);
+  -webkit-backdrop-filter: blur(12px) saturate(1.6);
+  color: white;
+  font-size: 1rem;
+  outline: none;
+  box-shadow:
+  inset 0 1px 0 rgba(255, 255, 255, 0.25),
+  0 8px 20px rgba(0,0,0, 0.25);
+  font-size: 1.3rem;
+}
+
+.waitlist-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.waitlist-button {
+  padding: 0.75rem 1.25rem;
+  border-radius: 13px;
+  border: 1 px solide rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px) saturate(1.8);
+  -webkit-backdrop-filter: blur (12px) saturate(1.8);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.25),
+    0 8px 20px rgba(0,0,0,0.25);
+  font-size: 1.3rem;
+}
+.waitlist-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+.waitlist-button:active {
+  transform: translateY(0);
+  opacity: 0.9;
+}
