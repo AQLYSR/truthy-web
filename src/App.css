@@ -1,0 +1,168 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  background-color: #101010;
+  color: #EEE;
+}
+#root {
+  position: relative;
+  isolation: isolate;
+  max-width: none;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0; 
+  text-align: center;
+  min-height: 100vh;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #FFF;
+}
+
+.background {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}
+.header {
+  margin: 2rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-text {
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #FFF;
+}
+
+.nav-link {
+  font-family: "League Spartan", sans-serif;
+  font-weight: 500;
+  font-size: 1.3rem;
+  color: #EEE;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav-link: hover {
+  color: #fff;
+}
+
+.phone {
+  width: 320px;
+  aspect-ratio: 9 / 19.5;
+  display: grid;
+  place-items: center;
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,.35));
+}
+
+.phone-body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 46px;
+  padding: 12px;
+  background: #000;
+  box-shadow:
+  inset 0 0 0 2px rgba(255,255,255,.25),
+  inset 0 0 0 8px rgba(0,0,0,.55); /* dark frame edge */
+}
+.phone-screen {
+  position: absolute;
+  inset: 12px;
+  border-radius: 36px;
+  overflow: hidden;
+  background-color: #0e0e0e;
+  background-image: url("src/assets/images/background5.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+
+/* --- Truth bubble (inside screen) --- */
+.truth-bubble-wrap {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+/* If you want to swap this for your GlassSurface, replace this block */
+.truth-bubble {
+  max-width: 92%;
+  padding: 14px 16px;
+  border-radius: 18px;
+  color: #eaeaea;
+  line-height: 1.35;
+  text-align: left;
+
+  /* glassy look */
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.18);
+  backdrop-filter: blur(12px) saturate(1.6);
+  -webkit-backdrop-filter: blur(12px) saturate(1.6);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.25),
+    0 10px 24px rgba(0,0,0,.25);
+}
+
+/* enter/leave animations */
+.truth-bubble {
+  transform: translateY(8px);
+  opacity: 0;
+  transition: transform 260ms ease, opacity 260ms ease;
+}
+
+.truth-bubble.enter {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.truth-bubble.leave {
+  transform: translateY(-8px);
+  opacity: 0;
+}
