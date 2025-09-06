@@ -189,7 +189,7 @@ function App() {
 
           <div className="hero-visual">
             <PhoneMockup>
-              /<TruthBubbleCarousel items={thoughts} />
+              <TruthBubbleCarousel items={thoughts} />
             </PhoneMockup>
           </div>
         </section>
