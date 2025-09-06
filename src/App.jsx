@@ -11,7 +11,7 @@ function App() {
     {
       id: 1,
       name: "Michael",
-      pfp: "/public/images/michael.jpg",
+      pfp: "/images/michael.jpg",
       thought: "Reminder: touch grass🌱",
       likes: 13,
       comments: 2,
@@ -21,7 +21,7 @@ function App() {
     {
       id: 2,
       name: "Gio",
-      pfp: "public/images/gio.jpg",
+      pfp: "/images/gio.jpg",
       thought: "Is it weird I feel more creative at 2am?",
       likes: 28,
       comments: 5,
@@ -31,7 +31,7 @@ function App() {
     {
       id: 3,
       name: "Sarah",
-      pfp: "public/images/sarah.jpg",
+      pfp: "/images/sarah.jpg",
       thought: "Can't stop thiking about AI replacing homework.",
       likes: 54,
       comments: 12,
