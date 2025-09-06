@@ -112,7 +112,7 @@ function App() {
         colorStops={["#876CFF", "#F67874", "#0E6DBC"]}
         blend={1}
         amplitude={0.6}
-        speed={0.3}
+        speed={0.6}
         className="background"
       />
 
@@ -149,9 +149,9 @@ function App() {
           <div className="hero-text">
             <h1> Be In The Moment.</h1>
             <ul>
-              <li>One RAW thought everyday</li>
-              <li>See what your friends are thinking at the same time</li>
-              <li>No lurking: if you don't post, you don't get to read</li>
+              <li>💭 Share one thougth each day</li>
+              <li>👀 See friends’ thoughts at the same time</li>
+              <li>🚫📖 Post to read — no silent scrolling</li>
             </ul>
             <p>
               Everyday you'll get a prompt to share what's on your mind. Post your thought to see what your friends are thinking too.

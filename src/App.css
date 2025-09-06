@@ -239,21 +239,26 @@ html, body {
   color: #fff;
   text-align: left;
   font-family: 'Roboto', sans-serif;
-  margin-left: 4rem;
+  margin-left: 2rem;
   font-weight: 700;
 }
 .hero-text ul {
-  line-height: 1;
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  list-style: none;
+  padding-left: 0;
+  line-height: 1.35;
+  font-size: 2.3rem;
+  margin-bottom: 1.5rem;
 }
 .hero-text h1 {
-  font-size: 5rem;
-  margin-bottom: 0.3rem;
+  font-size: clamp(3.5rem, 7vw, 5rem);
+  margin-bottom: 1.5rem;
 }
 .hero-text p {
   font-size: 1.5rem;
+  max-width: 60ch;
   margin-bottom: 1rem;
+  font-weight: 400;
+  color: #d1d1d1;
 }
 
 
@@ -264,7 +269,7 @@ html, body {
   flex: 1;
   display: flex;
   justify-content: flex-end;
-  margin-right: 3rem;
+  margin-right: 1.5rem;
 }
 
 .hero-visual .phone {
