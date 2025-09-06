@@ -193,6 +193,10 @@ function App() {
             </PhoneMockup>
           </div>
         </section>
+
+        <footer className="footer">
+          <p>&#xA9; 2025 Truthy. All rights reserved.</p>
+        </footer>
       </div>
     </>
   )
