@@ -8,10 +8,76 @@ import { useState } from 'react'
 
 function App() {
   const thoughts = [
-    "Reminder: touch grass🌱",
-    "Is it weird I feel more creative at 2am?",
-    "Can't stop thinking about AI replacing homework",
-    "If I write it, will future-me judge me?",
+    {
+      id: 1,
+      name: "Michael",
+      pfp: "/public/images/michael.jpg",
+      thought: "Reminder: touch grass🌱",
+      likes: 13,
+      comments: 2,
+      location: "Soho, Manhattan",
+      time: "20:22"
+    },
+    {
+      id: 2,
+      name: "Gio",
+      pfp: "public/images/gio.jpg",
+      thought: "Is it weird I feel more creative at 2am?",
+      likes: 28,
+      comments: 5,
+      location: "Trastevere, Rome",
+      time: "02:15"
+    },
+    {
+      id: 3,
+      name: "Sarah",
+      pfp: "public/images/sarah.jpg",
+      thought: "Can't stop thiking about AI replacing homework.",
+      likes: 54,
+      comments: 12,
+      location: "San Francisco",
+      time: "18:45"
+    },
+    {
+      id: 4,
+      name: "Alex",
+      pfp: "/images/alex.jpg", // Assuming you'd add this image
+      thought: "Just realized my 'productive' hours are actually 10 PM - 2 AM. Guess I'm a night owl now.",
+      likes: 41,
+      comments: 8,
+      location: "Berlin, Germany",
+      time: "00:07"
+    },
+    {
+      id: 5,
+      name: "Chloe",
+      pfp: "/images/chloe.jpg", // Assuming you'd add this image
+      thought: "Trying to adult but all I want to do is eat cereal for dinner.",
+      likes: 22,
+      comments: 3,
+      location: "London, UK",
+      time: "19:30"
+    },
+    {
+      id: 6,
+      name: "David",
+      pfp: "/images/david.jpg", // Assuming you'd add this image
+      thought: "The amount of unread emails in my inbox is starting to give me anxiety.",
+      likes: 67,
+      comments: 15,
+      location: "New York, USA",
+      time: "11:55"
+    },
+    {
+      id: 7,
+      name: "Sophia",
+      pfp: "/images/sophia.jpg", // Assuming you'd add this image
+      thought: "Is it just me, or does anyone else feel like they're constantly forgetting something important?",
+      likes: 35,
+      comments: 6,
+      location: "Sydney, Australia",
+      time: "09:10"
+    }
   ];
 
   const [email, setEmail] = useState("");
@@ -118,7 +184,7 @@ function App() {
 
           <div className="hero-visual">
             <PhoneMockup>
-              <TruthBubbleCarousel items={thoughts} />
+              /<TruthBubbleCarousel items={thoughts} />
             </PhoneMockup>
           </div>
         </section>

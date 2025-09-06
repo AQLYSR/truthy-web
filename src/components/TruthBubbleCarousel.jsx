@@ -1,38 +1,62 @@
 import { useEffect, useState } from "react";
+import ThoughtCard from "./ThoughtCard";
+
+const ANIMATION_DURATION = 400;
 
 export default function TruthBubbleCarousel({
   items = [],
   interval = 3500,
 }) {
   const [i, setI] = useState(0);
-  const [phase, setPhase] = useState("in"); // "in" | "out"
+  const [phase, setPhase] = useState("enter"); 
 
   useEffect(() => {
-    let mounted = true;
+    let timerId;
+    if (phase === "enter") {
+      timerId = setTimeout(() => {
+        setPhase("idle");
+      }, ANIMATION_DURATION);
+    }
+    return () => clearTimeout(timerId);
+  }, [phase]);
 
-    const tick = () => {
-      if (!mounted) return;
-      setPhase("out");
-      setTimeout(() => {
-        setI((n) => (n + 1) % items.length);
-        setPhase("in");
-      }, 260); // match CSS transition
-    };
+  useEffect(() => {
+    let timerId;
+    if (phase === "idle") {
+      timerId = setTimeout(() => {
+        setPhase("leave"); 
+      }, interval);
+    }
+    return () => clearTimeout(timerId);
+  }, [phase, interval]);
 
-    const id = setInterval(tick, interval);
-    return () => {
-      mounted = false;
-      clearInterval(id);
-    };
-  }, [items.length, interval]);
+  useEffect(() => {
+    let timerId;
+    if (phase === "leave") {
+      timerId = setTimeout(() => {
+        setI((prevI) => (prevI + 1) % items.length);
+        setPhase("enter");
+      }, ANIMATION_DURATION);
+    }
+    return () => clearTimeout(timerId);
+  }, [phase, items.length]);
 
   if (!items.length) return null;
 
+  const currentItem = items[i];
+  let animationClass = "";
+
+  if (phase === "enter") {
+    animationClass = "enter";
+  } else if (phase === "idle") {
+    animationClass = "idle";
+  } else if (phase === "leave") {
+    animationClass = "leave";
+  }
+
   return (
     <div className="truth-bubble-wrap">
-      <div className={`truth-bubble ${phase === "in" ? "enter" : "leave"}`}>
-        {items[i]}
-      </div>
+      <ThoughtCard item={currentItem} className={animationClass} />
     </div>
   );
 }
