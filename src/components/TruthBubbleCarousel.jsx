@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import ThoughtCard from "./ThoughtCard";
 
-const ANIMATION_DURATION = 400;
+const ANIMATION_DURATION =800;
 
 export default function TruthBubbleCarousel({
   items = [],

@@ -148,8 +148,13 @@ function App() {
         <section className="hero">
           <div className="hero-text">
             <h1> Be In The Moment.</h1>
+            <div className="carousel-container-mobile">
+              <div className="mobile-carousel">
+                <TruthBubbleCarousel items={thoughts} />
+              </div>
+            </div>
             <ul>
-              <li>💭 Share one thougth each day</li>
+              <li>💭 Share one thought each day</li>
               <li>👀 See friends’ thoughts at the same time</li>
               <li>🚫📖 Post to read — no silent scrolling</li>
             </ul>
